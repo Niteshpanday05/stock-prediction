@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className='footer py-3 my-3'>
       <hr className='border-bottom'/>
-      <p className='text-light text-center'>&copy: 2025 Built with core concept</p>
+      <p className='text-light  text-center'> &copy; 2025 My Company. All rights reserved.</p>
     </footer>
   )
 }
