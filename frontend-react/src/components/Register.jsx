@@ -4,8 +4,8 @@ const Register = () => {
   return (
    <>
    <div className="container">
-    <div className="row justify-content-center">
-      <div className="col-md-6">
+    <div className="row justify-content-center p-2px">
+      <div className="col-md-6 bg-light-dark p-2px">
         <h3 className="text-light text-center">Create an Account</h3>
         <form>
           <input type="text" className='form-control mb-3' placeholder='Enter username' />
