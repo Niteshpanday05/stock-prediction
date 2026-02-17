@@ -1,17 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Register = () => {
+  const[username, setUsername] = useState('')
+  const[email,setEmail] = useState('')
+  const[password, setPassword] = useState('')
+
+  const handleRegistration = (e) => {
+    e.preventDefault();
+
+    const userData = {
+      username,email,password
+    }
+    console.log('userData==>',userData);
+  }
+
+
   return (
    <>
    <div className="container">
     <div className="row justify-content-center p-2px">
-      <div className="col-md-6 bg-light-dark p-2px">
-        <h3 className="text-light text-center">Create an Account</h3>
-        <form>
-          <input type="text" className='form-control mb-3' placeholder='Enter username' />
-          <input type="Email" className='form-control mb-3' placeholder='Enter email address' />
-           <input type="Password" className='form-control mb-3' placeholder='Enter password' />
-           <button type='Submit' className='btn btn-info d-block mx-auto'>Register</button>
+      <div className="col-md-6 bg-light-dark p-5 rounded">
+        <h3 className="text-light text-center mb-4">Create an Account</h3>
+        <form onSubmit={handleRegistration}>
+          <input type="text" className='form-control mb-3' placeholder='Enter username'  value={username} onChange={(e)=>setUsername(e.target.value )} />
+          <input type="Email" className='form-control mb-3' placeholder='Enter email address' value={email} onChange={(e)=>setEmail(e.target.value)} />
+           <input type="Password" className='form-control mb-5' placeholder='Enter password' value={password} onChange={(e)=>setPassword(e.target.value)} />
+           <button type='Submit' className='btn btn-info d-block mx-auto '>Register</button>
         </form>
       </div>
     </div>
